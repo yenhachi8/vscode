@@ -12,19 +12,32 @@ typedef struct node Node;
 
 int main()
 {
-    Node a, b, c;
-    Node *ptr = &a;
-    a.data = 12;
-    a.next = &b;
-    b.data = 5;
-    b.next = &c;
-    c.data = 30;
-    c.next = nullptr;
-
-    while (ptr != NULL)
+    int i, val, num;
+    Node *first, *current, *pre;
+    cout << "Number of Nodes:" << endl;
+    cin >> num;
+    for (i = 0; i < num; i++)
     {
-        cout << "address= " << ptr << " data= " << ptr->data << endl;
+        current = (Node *)malloc(sizeof(Node));
+        cout << "Data for Node " << i + 1 << "= ";
+        cin >> current->data;
+        if (i == 0)
+        {
+            first = current;
+        }
+        else
+        {
+            pre->next = current;
+        }
+        current->next = nullptr;
+        pre = current;
+    }
+    current = first;
 
-        ptr = ptr->next;
+    while (current != NULL)
+    {
+        cout << "address= " << current << " data= " << current->data << endl;
+
+        current = current->next;
     }
 }
