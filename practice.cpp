@@ -29,9 +29,9 @@ int main()
         {
             pre->next = current;
         }
-        current->next = nullptr;
         pre = current;
-    }
+        current->next = nullptr;
+        }
     current = first;
 
     while (current != NULL)
