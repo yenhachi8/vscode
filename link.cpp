@@ -24,7 +24,7 @@ int main()
     for (i = 0; i < num; i++)
     {
         cur = (node *)malloc(sizeof(node));
-        cout << "輸入節點" << i + 1 << "值：";
+        cout << "輸入第" << i + 1 << "節點的值：";
         cin >> datax;
         cur->data = datax;
         if (i == 0)
@@ -40,7 +40,7 @@ int main()
     cur = first;
     while (cur != nullptr)
     {
-        cout << "cur = " << cur << " data=" << cur->data << endl;
+        cout << "cur位址 = " << cur << " cur->data=" << cur->data << endl;
         cur = cur->next;
     }
 }
